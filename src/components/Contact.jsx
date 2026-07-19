@@ -17,12 +17,12 @@ const Contact = () => {
             projects. Feel free to get in touch.
           </p>
 
-          <a
-            href="mailto:mahamjameel.dev@gmail.com"
-            className="mt-10 inline-flex rounded-xl bg-violet-600 px-8 py-4 font-semibold transition duration-300 hover:bg-violet-500"
-          >
-            mahamjameel.dev@gmail.com
-          </a>
+   <a
+  href="mailto:mahamjameel.dev@gmail.com"
+  className="mt-10 flex w-full max-w-md mx-auto items-center justify-center break-all rounded-xl bg-violet-600 px-6 py-4 text-center text-sm font-semibold transition duration-300 hover:bg-violet-500 sm:text-base"
+>
+  mahamjameel.dev@gmail.com
+</a>
         </div>
       </div>
     </section>
