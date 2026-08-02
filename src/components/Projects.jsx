@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+
 const projects = [
   {
     title: "Teacher Management System",
@@ -29,10 +30,10 @@ const projects = [
   {
     title: "Velnix E-Commerce",
 
-    status: "85% Complete",
+    status: "Completed",
 
     description:
-      "A modern MERN Stack E-Commerce platform with Buyer & Seller modules, JWT Authentication, OTP Email Verification, Product Management, Cart, Wishlist and Order Management.",
+      "A complete MERN Stack E-Commerce platform featuring Buyer, Seller and Admin modules with secure authentication, product management, shopping cart, wishlist, checkout and order management. Built with a scalable backend architecture and responsive frontend.",
 
     technologies: [
       "React.js",
@@ -41,21 +42,26 @@ const projects = [
       "MongoDB",
     ],
 
-   features: [
-  "Buyer & Seller Dashboards",
-  "JWT Authentication",
-  "OTP Email Verification",
-  "Product CRUD",
-  "Cart & Wishlist",
-  "Checkout & Orders",
-  "Advanced Search & Filters",
-  "Role Based Access",
-],
+    features: [
+      "Buyer, Seller & Admin Modules",
+      "JWT Authentication",
+      "OTP Email Verification",
+      "Forgot & Reset Password",
+      "Role Based Access",
+      "Product CRUD",
+      "Cart Management",
+      "Wishlist",
+      "Checkout & Orders",
+      "Shipping Address",
+      "Payment Method",
+      "Advanced Search & Filters",
+    ],
 
     github:
       "https://github.com/maham-jamil-dev/Velnix-Ecommerce",
   },
 ];
+
 const Projects = () => {
   return (
     <section
@@ -67,7 +73,6 @@ const Projects = () => {
         {/* Heading */}
 
         <div className="mb-14">
-
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-violet-400">
             My Work
           </p>
@@ -81,86 +86,93 @@ const Projects = () => {
             development skills, backend architecture and responsive frontend
             development.
           </p>
-
         </div>
 
-<div className="grid gap-8 lg:grid-cols-2">
+        {/* Cards */}
+
+        <div className="grid gap-8 lg:grid-cols-2">
           {projects.map((project) => (
-  <div
-    key={project.title}
-    className="flex flex-col rounded-3xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:-translate-y-2 hover:border-violet-500 hover:shadow-xl hover:shadow-violet-900/20"
-  >
-    {/* Header */}
+            <div
+              key={project.title}
+              className="flex h-full flex-col rounded-3xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:-translate-y-2 hover:border-violet-500 hover:shadow-xl hover:shadow-violet-900/20"
+            >
+              {/* Header */}
 
-    <div className="flex items-start justify-between gap-4">
-      <h3 className="text-2xl font-bold">
-        {project.title}
-      </h3>
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-2xl font-bold">
+                  {project.title}
+                </h3>
 
-      <span
-        className={`rounded-full px-4 py-2 text-xs font-semibold ${
-          project.status === "Completed"
-            ? "bg-green-500/10 text-green-400 border border-green-500/40"
-            : "bg-violet-500/10 text-violet-400 border border-violet-500/40"
-        }`}
-      >
-        {project.status}
-      </span>
-    </div>
+                <span
+                  className={`rounded-full border px-4 py-2 text-xs font-semibold ${
+                    project.status === "Completed"
+                      ? "border-green-500/40 bg-green-500/10 text-green-400"
+                      : "border-violet-500/40 bg-violet-500/10 text-violet-400"
+                  }`}
+                >
+                  {project.status}
+                </span>
+              </div>
 
-    {/* Description */}
+              {/* Description */}
 
-    <p className="mt-6 leading-7 text-slate-400">
-      {project.description}
-    </p>
+              <p className="mt-6 leading-7 text-slate-400">
+                {project.description}
+              </p>
 
-    {/* Tech Stack */}
+              {/* Technologies */}
 
-    <div className="mt-6 flex flex-wrap gap-3">
-      {project.technologies.map((tech) => (
-        <span
-          key={tech}
-          className="rounded-lg bg-[#090c1a] border border-white/10 px-3 py-2 text-sm text-slate-300"
-        >
-          {tech}
-        </span>
-      ))}
-    </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {project.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-lg border border-white/10 bg-[#090c1a] px-3 py-2 text-sm text-slate-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
 
-    {/* Features */}
+              {/* Features */}
 
-    <div className="mt-8">
-      <h4 className="mb-3 font-semibold text-violet-400">
-        Key Features
-      </h4>
+              <div className="mt-8 flex-1">
+                <h4 className="mb-3 font-semibold text-violet-400">
+                  Key Features
+                </h4>
 
-      <ul className="space-y-2 text-sm text-slate-400">
-        {project.features.map((feature) => (
-          <li
-            key={feature}
-            className="flex items-center gap-2"
-          >
-            <span className="text-violet-400">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
+                <ul className="space-y-2 text-sm text-slate-400">
+                  {project.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2"
+                    >
+                      <span className="mt-0.5 text-violet-400">
+                        ✓
+                      </span>
 
-    {/* Github */}
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-    <a
-      href={project.github}
-      target="_blank"
-      rel="noreferrer"
-     className="mt-auto pt-8 inline-flex items-center gap-2 rounded-xl border border-violet-500 px-5 py-3 font-semibold text-violet-400 transition hover:bg-violet-500 hover:text-white"
-    >
-      <FaGithub size={20} />
-      View Source Code
-    </a>
-  </div>
-))}
+              {/* Github */}
+
+              <div className="mt-8">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl border border-violet-500 px-5 py-3 font-semibold text-violet-400 transition hover:bg-violet-500 hover:text-white"
+                >
+                  <FaGithub size={20} />
+                  View Source Code
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   );
