@@ -60,6 +60,41 @@ const projects = [
     github:
       "https://github.com/maham-jamil-dev/Velnix-Ecommerce",
   },
+
+  {
+    title: "DineHub Restaurant Management System",
+
+    status: "Completed",
+
+    description:
+      "A full-stack MERN restaurant management and reservation platform designed for customers, restaurant owners and administrators. The system supports restaurant creation and management, menu and order handling, table reservations, reviews, search, cart functionality and analytics.",
+
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
+
+    features: [
+      "Customer, Owner & Admin Roles",
+      "JWT Authentication",
+      "Restaurant Management",
+      "Menu Management",
+      "Restaurant Search & Filters",
+      "Food Ordering",
+      "Add to Cart",
+      "Table Reservation",
+      "Order Management",
+      "Customer Reviews",
+      "Admin Dashboard",
+      "Reports & Analytics",
+      "Role Based Access",
+    ],
+
+    github:
+      "https://github.com/maham-jamil-dev/DineHub",
+  },
 ];
 
 const Projects = () => {
